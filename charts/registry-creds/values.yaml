@@ -4,7 +4,7 @@ image:
   repository: holoplot/registry-creds
   # tag is the version of the image that should be pulled from the repository
   tag: 0.0.2
-  # pullPolicy dictates when an image is pulled when a pod is creaded, it may be Always, Never, or IfNotPresent
+  # pullPolicy dictates when an image is pulled when a pod is created, it may be Always, Never, or IfNotPresent
   pullPolicy: IfNotPresent
 
 ## dpr is configuration for a docker private registry server
@@ -22,7 +22,7 @@ image:
 #  accessKeyID: foo
 #  # secretAccessKey is the secret matching the acccess key Id
 #  secretAccessKey: bar
-#  # sessionToken is an additional secret that may be reuired to authenticate to AWS
+#  # sessionToken is an additional secret that may be required to authenticate to AWS
 #  sessionToken: foo
 #  # account is a numercial string refereing the to the AWS account in which the target ECR repository resides
 #  account: bar
