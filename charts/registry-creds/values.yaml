@@ -1,9 +1,9 @@
 # image is the image used to manage registry creds
 image:
-  # repository is the path to the reposity from whic hthe image should be pulled
-  repository: mhill4holoplot/registry-creds
-  # tag is the version of the image that should be pulle from the repository
-  tag: 1.11
+  # repository is the path to the reposity from which the image should be pulled
+  repository: holoplot/registry-creds
+  # tag is the version of the image that should be pulled from the repository
+  tag: 0.0.2
   # pullPolicy dictates when an image is pulled when a pod is creaded, it may be Always, Never, or IfNotPresent
   pullPolicy: IfNotPresent
 
