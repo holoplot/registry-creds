@@ -31,7 +31,25 @@ The following parameters are driven via Environment variables.
   - DOCKER_PRIVATE_REGISTRY_SERVER, DOCKER_PRIVATE_REGISTRY_USER, DOCKER_PRIVATE_REGISTRY_PASSWORD: the URL, user name, and password for a Docker private registry
   - ACR_URL, ACR_CLIENT_ID, ACR_PASSWORD: the registry URL, client ID, and password to access to access an Azure Container Registry.
 
-## How to setup running in AWS
+## Using the Helm chart
+
+Refer to [charts/registry-creds/values.yaml](charts/registry-creds/values.yaml) for documentation of the available configuration options.
+
+Add the helm repository:
+
+```
+helm repo add holoplot-registry-creds https://holoplot.github.io/registry-creds
+```
+
+Install the chart:
+
+```
+helm install registry-creds holoplot-registry-creds/registry-creds # add your configuration here
+```
+
+## Plain kubectl installation
+
+### How to setup running in AWS
 
 1. Clone the repo and navigate to directory
 
@@ -73,7 +91,7 @@ The following parameters are driven via Environment variables.
 
 4. Use `awsecr-cred` for name of `imagePullSecrets` on your `deployment.yaml` file.
 
-## How to setup running in GCR
+### How to setup running in GCR
 
 1. Clone the repo and navigate to directory
 
@@ -96,7 +114,7 @@ The value for `application_default_credentials.json` can be obtained with the fo
    kubectl create -f k8s/replicationController.yaml
    ```
 
-## How to setup running in Docker Private Registry
+### How to setup running in Docker Private Registry
 
 1. Clone the repo and navigate to directory
 
@@ -118,7 +136,7 @@ The value for `application_default_credentials.json` can be obtained with the fo
    kubectl create -f k8s/replicationController.yaml
    ```
 
-## How to set up Azure Container Registry
+### How to set up Azure Container Registry
 
 1. [Create a service principal](https://docs.microsoft.com/en-us/azure/container-registry/container-registry-auth-service-principal) that your Kubernetes cluster will use to access the registry.
 
