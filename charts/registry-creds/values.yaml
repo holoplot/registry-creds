@@ -31,14 +31,14 @@ image:
 #  # assumeRole is an optional role to be assumed in order to generate an ECR access token
 #  assumeRole: bar
 #
-## gcr is configuration for the Google Cotainer Registry
+## gcr is configuration for the Google Container Registry
 #gcr:
 #  # applicationDefaultCredentials the credentials used to authenticate to Google Cloud Platform
 #  applicationDefaultCredentials: foo
 #  # url the URL use to connect to GCR
 #  url: bar
 #
-## acr configuraiton for pulling images from Azure Container Registry
+## acr configuration for pulling images from Azure Container Registry
 #acr:
 #  # url the url to authenticate to
 #  url: foo
