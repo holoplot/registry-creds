@@ -2,6 +2,16 @@ apiVersion: v1
 entries:
   registry-creds:
   - apiVersion: v1
+    appVersion: 0.0.3
+    created: "2023-04-13T14:16:19.648994475Z"
+    description: Allow for Registry credentials to be refreshed inside your Kubernetes
+      cluster via `ImagePullSecrets`.
+    digest: 4dabfe1a8d387629435f9b60cb32f7d8ebc9a773318f22d15f4e638cc611f61c
+    name: registry-creds
+    urls:
+    - https://github.com/holoplot/registry-creds/releases/download/registry-creds-0.0.5/registry-creds-0.0.5.tgz
+    version: 0.0.5
+  - apiVersion: v1
     appVersion: 0.0.2
     created: "2023-04-12T11:59:35.8809903Z"
     description: Allow for Registry credentials to be refreshed inside your Kubernetes
@@ -31,4 +41,4 @@ entries:
     urls:
     - https://github.com/holoplot/registry-creds/releases/download/registry-creds-0.0.2/registry-creds-0.0.2.tgz
     version: 0.0.2
-generated: "2023-04-12T11:59:35.8810055Z"
+generated: "2023-04-13T14:16:19.649008975Z"
