@@ -47,3 +47,10 @@ image:
 #  # password the password for the azure client
 #  password: foo
 #
+
+# httpProxy provides a way to proxy http/https requests as required in some environemnts
+#httpProxy:
+#  # url is the URL of the proxy server
+#  url: http://proxy.example.com:8080
+#  # noProxy is a comma separated list of hosts that should not be proxied
+#  noProxy: localhost
