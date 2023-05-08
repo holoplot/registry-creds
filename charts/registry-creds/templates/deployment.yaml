@@ -85,6 +85,14 @@ spec:
                 name: {{ .Release.Name }}-acr
                 key: ACR_PASSWORD
         {{ end }}
+        {{ if .Values.httpProxy }}
+          - name: HTTP_PROXY
+            value: {{ .Values.httpProxy.url }}
+          - name: HTTPS_PROXY
+            value: {{ .Values.httpProxy.url }}
+          - name: NO_PROXY
+            value: {{ default "" .Values.httpProxy.noProxy }}
+        {{ end }}
       {{ if .Values.gcr }}
         volumeMounts:
         - name: gcr-creds
