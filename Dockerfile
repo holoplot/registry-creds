@@ -1,5 +1,6 @@
-FROM golang:1.21-alpine AS build
+ARG ARCH=amd64
 
+FROM golang:1.21-alpine AS build
 WORKDIR /go/src/github.com/holoplot/registry-creds
 
 # Only invalidate the download layer if the modules changed
@@ -8,13 +9,11 @@ RUN go mod download
 
 COPY . .
 RUN --mount=type=cache,target=/root/.cache/go-build \
-  go build
+  CGO_ENABLED=0 GOOS=linux GOARCH=${ARCH} go build
 
-FROM alpine:3.19
+FROM ${ARCH}/alpine:3.19
 
-RUN apk add --update ca-certificates && \
-  rm -rf /var/cache/apk/*
-
+RUN apk add --update ca-certificates && rm -rf /var/cache/apk/*
 COPY --from=build /go/src/github.com/holoplot/registry-creds/registry-creds registry-creds
 
 ENTRYPOINT ["/registry-creds"]
