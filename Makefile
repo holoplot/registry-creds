@@ -5,6 +5,8 @@
 TAG = 1.11
 PREFIX = upmcenterprises
 
+ARCH ?= amd64
+
 BIN = registry-creds
 
 GO111MODULE=off
@@ -27,7 +29,7 @@ all: container
 
 .PHONY: build
 build: main.go
-	GOOS=linux GOARCH=amd64 CGO_ENABLED=0 go build -a -installsuffix cgo -o $(BIN) --ldflags '-w' $<
+	GOOS=linux GOARCH=${ARCH} CGO_ENABLED=0 go build -a -installsuffix cgo -o $(BIN) --ldflags '-w' $<
 
 .PHONY: container
 container: build
