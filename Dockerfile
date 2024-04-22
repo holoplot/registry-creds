@@ -1,7 +1,7 @@
-ARG BUILDPLATFORM
+FROM --platform=$BUILDPLATFORM golang:1.21-alpine AS build
 ARG TARGETOS
 ARG TARGETARCH
-FROM --platform=$BUILDPLATFORM golang:1.21-alpine AS build
+
 WORKDIR /go/src/github.com/holoplot/registry-creds
 
 # Only invalidate the download layer if the modules changed
