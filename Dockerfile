@@ -1,4 +1,4 @@
-FROM --platform=$BUILDPLATFORM golang:1.21-alpine AS build
+FROM --platform=$BUILDPLATFORM golang:1.23-alpine AS build
 ARG TARGETOS
 ARG TARGETARCH
 
@@ -12,7 +12,7 @@ COPY . .
 RUN --mount=type=cache,target=/root/.cache/go-build \
   CGO_ENABLED=0 GOOS=$TARGETOS GOARCH=$TARGETARCH go build
 
-FROM alpine:3.19
+FROM alpine:3.21
 
 RUN apk add --update ca-certificates && rm -rf /var/cache/apk/*
 COPY --from=build /go/src/github.com/holoplot/registry-creds/registry-creds registry-creds
