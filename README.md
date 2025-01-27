@@ -177,5 +177,5 @@ If you want to hack on this project:
 
 Maintained by Holoplot https://holoplot.com
 
-Folked from https://github.com/upmc-enterprises/registry-creds
+Forked from https://github.com/upmc-enterprises/registry-creds
 Originally built by UPMC Enterprises in Pittsburgh, PA. http://enterprises.upmc.com/
