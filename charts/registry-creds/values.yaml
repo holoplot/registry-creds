@@ -1,6 +1,6 @@
 # image is the image used to manage registry creds
 image:
-  # repository is the path to the reposity from which the image should be pulled
+  # repository is the path to the repository from which the image should be pulled
   repository: holoplot/registry-creds
   # tag is the version of the image that should be pulled from the repository
   tag: 0.0.5
@@ -20,11 +20,11 @@ image:
 #ecr:
 #  # accessKeyID is the AWS access key ID for the IAM user to be used to pull images
 #  accessKeyID: foo
-#  # secretAccessKey is the secret matching the acccess key Id
+#  # secretAccessKey is the secret matching the access key Id
 #  secretAccessKey: bar
 #  # sessionToken is an additional secret that may be required to authenticate to AWS
 #  sessionToken: foo
-#  # account is a numercial string refereing the to the AWS account in which the target ECR repository resides
+#  # account is a numerical string referring the to the AWS account in which the target ECR repository resides
 #  account: bar
 #  # region is the AWS region from which you wish to pull images from
 #  region: foo
@@ -48,7 +48,7 @@ image:
 #  password: foo
 #
 
-# httpProxy provides a way to proxy http/https requests as required in some environemnts
+# httpProxy provides a way to proxy http/https requests as required in some environments
 #httpProxy:
 #  # url is the URL of the proxy server
 #  url: http://proxy.example.com:8080
