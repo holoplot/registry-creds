@@ -12,6 +12,8 @@ spec:
     metadata:
       labels:
         name: {{ .Release.Name }}
+      annotations:
+        checksum/secret: {{ include (print $.Template.BasePath "/secret.yaml") . | sha256sum }}
     spec:
       serviceAccountName: {{ .Release.Name }}
       containers:
@@ -50,6 +52,7 @@ spec:
               secretKeyRef:
                 name: {{ .Release.Name }}-ecr
                 key: aws-assume-role
+                optional: true
         {{ end }}
         {{ if .Values.dpr }}
           - name: DOCKER_PRIVATE_REGISTRY_PASSWORD
