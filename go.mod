@@ -8,7 +8,7 @@ require (
 	github.com/aws/aws-sdk-go v1.55.6
 	github.com/cenkalti/backoff v2.2.1+incompatible
 	github.com/sirupsen/logrus v1.9.3
-	github.com/spf13/pflag v1.0.5
+	github.com/spf13/pflag v1.0.6
 	github.com/stretchr/testify v1.9.0
 	golang.org/x/net v0.34.0
 	golang.org/x/oauth2 v0.25.0
