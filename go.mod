@@ -2,7 +2,7 @@ module github.com/upmc-enterprises/registry-creds
 
 go 1.23.0
 
-toolchain go1.24.1
+toolchain go1.24.3
 
 require (
 	github.com/aws/aws-sdk-go v1.55.6
