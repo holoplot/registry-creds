@@ -1,8 +1,6 @@
 module github.com/upmc-enterprises/registry-creds
 
-go 1.24.0
-
-toolchain go1.24.5
+go 1.26.0
 
 require (
 	github.com/aws/aws-sdk-go v1.55.7
@@ -11,7 +9,7 @@ require (
 	github.com/spf13/pflag v1.0.7
 	github.com/stretchr/testify v1.10.0
 	golang.org/x/net v0.42.0
-	golang.org/x/oauth2 v0.30.0
+	golang.org/x/oauth2 v0.37.0
 	k8s.io/api v0.33.3
 	k8s.io/apimachinery v0.33.3
 	k8s.io/client-go v0.33.3
